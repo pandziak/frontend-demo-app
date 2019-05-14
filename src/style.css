@@ -1,0 +1,30 @@
+body {
+	border: 5px dotted #000;
+	padding: 8px;
+}
+
+p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-indent: 20px;
+}
+
+p:first-letter {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+h1 {
+	text-align: center;
+	color: #000ff0;	
+}
+
+h2 {
+	color: #228B22;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.last-paragraphs {
+	font-style: italic;
+}
