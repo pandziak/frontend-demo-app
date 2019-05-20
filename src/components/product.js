@@ -1,14 +1,17 @@
-// DOM
-// przecinki zamiast kropek
-// zł zamiast PLN, $ zamiast USD itp. (mapeczka) albo API? biblioteka?
-// 12,324 zł
-// $ 12.324
-// EUR znak 123.12
+const currencies = getBasicCurrencies();
+const currentCurrency = 'HUF';
 
 function formatPrice(price) {
-    return '<div>...'
+    let currencyObject = currencies.currency.find(item => item.key === currentCurrency);
+    console.log(currencyObject);
 
-    // `${price.amount} + ' ' + ${price.currency}`
+    let formattedPrice =
+        new Intl.NumberFormat(
+            currencyObject.value,
+            {style: 'currency', currency: currencyObject.key}).format(price.amount);
+    console.log(formattedPrice);
+
+    return `<div>${formattedPrice}</div>`
 }
 
 function renderProduct(product) {
@@ -18,6 +21,5 @@ function renderProduct(product) {
 		<h2 class="product-title">${product.name}</h2>
 		<div>${formatPrice(product.price)}</div>
 		<div class="product-description">${product.description.text}</div>
-		</div>
-    `;
+		</div>`;
 }

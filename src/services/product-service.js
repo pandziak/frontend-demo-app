@@ -74,3 +74,46 @@ function getProductList() {
         ]
     }
 }
+
+function getBasicCurrencies() {
+    return {
+        "currency": [
+            {
+                "key": "BGN",
+                "value": "bg-BG"
+            },
+            {
+                "key": "CZK",
+                "value": "cs-CS"
+            },
+            {
+                "key": "DE",
+                "value": "de-DE"
+            },
+            {
+                "key": "GBP",
+                "value": "en-GB"
+            },
+            {
+                "key": "HUF",
+                "value": "hu-HU"
+            },
+            {
+                "key": "ITL",
+                "value": "it-IT"
+            },
+            {
+                "key": "JPY",
+                "value": "ja-JP"
+            },
+            {
+                "key": "PLN",
+                "value": "pl-PL"
+            },
+            {
+                "key": "USD",
+                "value": "en-EN"
+            }
+        ]
+    }
+}

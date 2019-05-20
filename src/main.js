@@ -1,5 +1,5 @@
 const listingElement = document.querySelector('#listing');
-console.log(listingElement.inn);
+// console.log(listingElement.inn);
 const response = getProductList();
 
 response.products
